@@ -1,0 +1,37 @@
+<html>
+    <body>
+           <h1> Student result</h1> 
+           <p>Grades based on marks..</p>
+           <p id="grade"></p>
+
+           <input type= "text" id = "marks"  placeholder = "Enter the marks">
+           <button type= "submit" onclick="myFucntion()"> Result </button>
+
+        <script>
+             const numeric = document.getElementById("marks");
+             const display = document.getElementById("grade");
+
+             function myFucntion()
+              {
+              const marks = parseInt(numeric.value)
+               if( marks >90)
+               {
+                   grade ="A";
+               }          
+              else if((marks <=90) && (marks >=80))
+              {
+                   grade ="B";
+               }
+              else if((marks <=79 ) && (marks>=70))
+              {
+                   grade ="C";
+               }
+              else{
+                   grade ="D";
+               }
+             display.innerHTML = grade;
+            }
+
+        </script>
+    </body>
+</html>

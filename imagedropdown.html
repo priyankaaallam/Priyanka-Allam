@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .dropdown{
+                position: relative;
+                display: inline-block;
+            }
+            .dropdown-content{
+                position: absolute;
+                display: none;
+                z-index: 1;
+                min-width: 160px;
+            }
+            .dropdown:hover .dropdown-content{
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Image Dropdown</h1>
+        <p> mouse hover on image</p>
+        <div class="dropdown">
+            <img src="./7.jpg" alt="pencil" width="200px" height="200px">
+            <div class="dropdown-content">
+                <img src="./7.jpg" alt="pencil" width="500px" height="500px">
+            </div>
+        </div>
+    </body>
+</html>

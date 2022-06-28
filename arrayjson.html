@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Json Array</h2>
+        <p id="demo"></p>
+        <script>
+            const arr = '["one","two","three","four"]';
+            const obj = JSON.parse(arr);
+            document.getElementById("demo").innerHTML = obj[0];
+        </script>
+    </body>
+</html>

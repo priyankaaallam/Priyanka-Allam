@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="demo"></p>
+        <script>
+            const details = {
+                name : 'Priyanka',
+                id : 1867,
+                age : 26,
+                company :'Techouts'
+            }
+            myDetails(details);
+            function myDetails({ name, id, company })  {
+                const message= 'I am '+name + ' , emp-id ' +id + ' and working at ' +company;
+                document.getElementById("demo").innerHTML = message;
+            }
+
+            
+        </script>
+    </body>
+</html>

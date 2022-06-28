@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2> global window object</h2>
+        <p>Global declared with <b>var</b> wil be window variable</p>
+        <p id="demo"></p>
+        <p>global variables declared with <b>let</b> will not be window variable</p>
+        <p id="demo1"></p>
+        <script>
+            var color="Black";
+            let colors="Blue";
+            document.getElementById("demo").innerHTML=window.color;
+            document.getElementById("demo1").innerHTML=window.colors;
+        </script>
+    </body>
+</html>

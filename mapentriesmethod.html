@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Javascript Map objects</h2>
+        <p>Map. entries method</p>
+        <p id="demo"></p>
+        <script>
+            
+            const colors = new Map([
+                ["Red",212],
+                ["Black",323],
+                ["Green",111],
+                ["Blue",231]
+            ]);
+            let text=" ";
+            for(const x of colors.entries()){
+                text += x + "<br>";
+            }
+            document.getElementById("demo").innerHTML=text;
+        </script>
+    </body>
+</html>

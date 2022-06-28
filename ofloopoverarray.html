@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            p{
+                background-color: bisque;
+                border: 1px solid black;
+                margin:20px;
+                width: 70px;
+                height: 70px;
+                text-align: center;
+            }
+        </style>
+    </head>
+<body>
+    <h1>Of loop over an array</h1>
+    <p id="demo"></p>
+    <script>
+        const color=["black","red","blue"];
+        let text="";
+        for(let x of color){
+            text +=x +"<br>"
+        }
+        document.getElementById("demo").innerHTML=text;
+    </script>
+</body>
+</html>

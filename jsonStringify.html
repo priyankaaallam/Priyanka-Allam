@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2> Json.Stringify method converts date objects into string</h2>
+        <p id="demo"></p>
+        <script>
+            const obj = {"name": "Priyanka" , today: new Date()};
+            const myJson = JSON.stringify(obj);
+            document.getElementById("demo").innerHTML= myJson;
+        </script>
+    </body>
+</html>

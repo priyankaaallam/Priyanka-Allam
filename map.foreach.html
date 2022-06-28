@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Javascript map objects</h2>
+        <p>Map.foreach loop</p>
+        <p id="demo"></p>
+        <script>
+            const colors=new Map([
+              ["Red",111],
+              ["Blue",222],
+              ["Green",333],
+              ["Black",444]  
+            ]);
+            let text="";
+            colors.forEach(function(value,key){
+                text += value + " = " + key + "<br>";
+
+            })
+            document.getElementById("demo").innerHTML=text;
+        </script>
+    </body>
+</html>

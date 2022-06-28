@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>JSON Stringify</h2>
+        <p id="demo"></p>
+        <script>
+            const text= {name: "Priyanka" , age : function () {return 26;}, city:"HYD"};
+            text.age=text.age.toString();
+            const obj= JSON.stringify(text);
+            document.getElementById("demo").innerHTML =obj;
+        </script>
+    </body>
+</html>

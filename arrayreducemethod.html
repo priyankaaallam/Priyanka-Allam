@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Array reduce method</h2>
+        <p id="demo"></p>
+         <script>
+             const x=[11,9,19,4,5,56];
+             const num=x.reduce(myfunction,100);
+             document.getElementById("demo").innerHTML=num;
+             function myfunction(total,value,index,array){
+                 return total+value;
+             }
+         </script>
+    </body>
+</html>

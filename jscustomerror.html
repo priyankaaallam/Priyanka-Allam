@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Enter a number between 5 to 10</p>
+        <input type="text" id="demo">
+        <button type="button" onclick="myfunction()">Input</button>
+        <p id="demo1"></p>
+        <script>
+            function myfunction(){
+                const message= document.getElementById("demo1");
+                message.innerHTML="";
+                let x = document.getElementById("demo").value;
+                try{
+                    if(x==" ") throw "empty";
+                    if(x==isNaN) throw "not a number";
+                    if(x<5) throw "number is too small";
+                    if(x>10) throw "number is long";
+                    x=Number(x);
+                }
+                catch(err){
+                    message.innerHTML="input "+ err;
+                }
+            }
+        </script>
+    </body>
+</html>

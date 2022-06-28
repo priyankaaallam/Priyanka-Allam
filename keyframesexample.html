@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div{
+                width: 100px;
+                height: 100px;
+                background-color: rgb(216, 14, 14);
+                animation-name: colors;
+                animation-duration: 7s;
+                position: relative;
+                animation-iteration-count: 3;
+                animation-direction: reverse;
+            }
+            @keyframes colors{
+                0%  {background-color: rgb(214, 15, 15); left: 0;top: 0;}
+             25%  {background-color: green; left: 200px; top: 0;}
+               50% { background-color: yellow;left: 200px; top: 200px;}
+              75% {background-color: rgb(13, 0, 128); left: 0; top: 200px;}
+               100% { background-color: rgb(255, 0, 0); left: 0; top: 0;}
+            }
+        </style>
+
+    </head>
+    <body>
+        <div></div>
+                 
+    </body>
+</html>

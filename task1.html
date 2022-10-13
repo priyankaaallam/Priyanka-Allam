@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+           <style>
+    body{
+      text-align: center;
+      background-color: rgb(246, 230, 252);
+    }
+     
+      #demo{
+        font-size: larger;
+       
+      }
+        
+    </style>
+  </head>
+  <body>
+    <div class="container">
+       
+              <h3>University having most student count ?</h3>
+              <button onclick="maxStudentsInCol('students')">Click here</button>
+              <p id="demo"></p>
+          </div>
+          
+             
+          <script>
+        var data;
+    fetch("task.json")
+        .then((res) => res.json())
+        .then((data1) => {
+            data = data1
+        });
+    var arr = []
+    var arr1 = []
+    var studentCount = 0;
+   
+
+    function maxStudentsInCol(clg) {
+        data.universities.filter((unid, index) => {
+            data.colleges.filter(col => {
+                if (unid.un_id === col.un_id) {
+                    
+                    data.collegeDepartments.filter(dept => {
+                        if (col.c_id === dept.c_id) {
+                    if (clg === "students") {
+                        studentCount += dept.student_count
+                    } 
+                }
+                    })
+                    
+                }
+            })
+            if (clg === "students") {
+                arr[index] = studentCount;
+                arr1[index] = { universities: unid.name, studentCount: studentCount };
+            }
+            studentCount = 0
+            
+        })
+                      let id = arr.indexOf(Math.max(...arr))
+              if (clg === "students") {
+            document.getElementById("demo").innerHTML = data.universities[id].name
+        } 
+    }
+    </script>
+  </body>
+</html>
